@@ -5,7 +5,7 @@ import "./App.css";
 import { useEffect } from "react";
 import Call from "./components/VideoCall.js";
 
-export const socket = io("http://localhost:5000", { autoConnect: false });
+export const socket = io(`${process.env.REACT_APP_API_URL}`, { autoConnect: false });
 
 function App() {
   useEffect(() => {
@@ -13,7 +13,6 @@ function App() {
     socket.on("connect", () => {
       console.log("Connected to server");
     });
-    
     return () => {
       socket.disconnect();
     };
