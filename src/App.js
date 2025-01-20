@@ -5,7 +5,11 @@ import "./App.css";
 import { useEffect } from "react";
 import Call from "./components/VideoCall.js";
 
-export const socket = io("https://71ad-183-82-1-224.ngrok-free.app", { autoConnect: false ,withCredentials:true});
+export const socket = io("https://71ad-183-82-1-224.ngrok-free.app", {
+  autoConnect: false,
+  withCredentials: true,
+  transports: ["websocket", "polling", "flashsocket"],
+});
 
 function App() {
   useEffect(() => {
