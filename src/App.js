@@ -5,7 +5,7 @@ import "./App.css";
 import { useEffect } from "react";
 import Call from "./components/VideoCall.js";
 
-export const socket = io("https://8d2e-183-82-1-224.ngrok-free.app", { autoConnect: false });
+export const socket = io("https://8d2e-183-82-1-224.ngrok-free.app", { autoConnect: false ,withCredentials:true});
 
 function App() {
   useEffect(() => {
