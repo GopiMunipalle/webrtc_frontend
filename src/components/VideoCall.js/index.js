@@ -149,7 +149,7 @@ function Call() {
   return (
     <div>
       <h1>Video Call</h1>
-
+      <h1>Logined User {username}</h1>
       {incomingCall && (
         <div>
           <p>Incoming call from {incomingCall.from}</p>

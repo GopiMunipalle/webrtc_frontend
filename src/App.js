@@ -13,7 +13,7 @@ function App() {
     socket.on("connect", () => {
       console.log("Connected to server");
     });
-
+    
     return () => {
       socket.disconnect();
     };
